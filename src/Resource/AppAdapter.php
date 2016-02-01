@@ -91,7 +91,7 @@ final class AppAdapter implements AdapterInterface
         if (empty($uri->method)) {
             if (getenv('REQUEST_METHOD')) {
                 $method = getenv('REQUEST_METHOD');
-            } elseif (getenv('argv') && isset($_SERVER['argv'][1])) {
+            } elseif (isset($_SERVER['argv']) && isset($_SERVER['argv'][1])) {
                 $method = $_SERVER['argv'][1];
             }
         } else {
