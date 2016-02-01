@@ -1,0 +1,38 @@
+{
+    "name": "ryo88c/chat-work-api-client",
+    "type": "project",
+    "description": "ChatWork API Client by BEAR.Sunday",
+    "keywords": [
+        "BEAR.Sunday",
+        "ChatWork"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0",
+        "bear/package": "~1.0",
+        "josegonzalez/dotenv": "~2.0",
+        "guzzlehttp/guzzle": "^6.1",
+        "bear/aura-router-module": "^1.0"
+    },
+    "require-dev": {
+        "composer/composer": ">=1.0.0-alpha10",
+        "phpunit/phpunit": "~4.8",
+        "squizlabs/php_codesniffer": "~2.3",
+        "phpmd/phpmd": "~2.3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ryo88c\\ChatWorkApiClient\\": "src/",
+            "Ryo88c\\ChatWorkApiClient\\Fake\\": "tests/Fake/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "php vendor/phpmd/phpmd/src/bin/phpmd src text ./phpmd.xml",
+            "php vendor/squizlabs/php_codesniffer/scripts/phpcs",
+            "php vendor/phpunit/phpunit/phpunit"
+        ]
+    }
+}
