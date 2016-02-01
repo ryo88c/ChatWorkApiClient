@@ -12,7 +12,6 @@
         "bear/package": "~1.0",
         "josegonzalez/dotenv": "~2.0",
         "guzzlehttp/guzzle": "^6.1",
-        "bear/aura-router-module": "^1.0"
     },
     "require-dev": {
         "composer/composer": ">=1.0.0-alpha10",
