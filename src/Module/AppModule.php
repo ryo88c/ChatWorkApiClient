@@ -12,6 +12,8 @@ use josegonzalez\Dotenv\Loader as Dotenv;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use BEAR\Resource\SchemeCollectionInterface;
+use BEAR\Resource\ResourceInterface;
+use Ryo88c\ChatWorkApiClient\Resource\Resource;
 
 class AppModule extends AbstractModule
 {
@@ -28,5 +30,6 @@ class AppModule extends AbstractModule
         $this->bind(ClientInterface::class)->to(Client::class);
         $this->bind(ChatWorkApiClientInterface::class)->to(ChatWorkApiClient::class);
         $this->bind(SchemeCollectionInterface::class)->toProvider(SchemeCollectionProvider::class);
+        $this->bind(ResourceInterface::class)->to(Resource::class);
     }
 }
