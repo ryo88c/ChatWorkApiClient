@@ -38,6 +38,6 @@ trait ChatWorkApiClientInject
                 $options['body'] = http_build_query($this->uri->query, '', '&');
             }
         }
-        return $this->apiClient->request($this->uri->method, static::$endpoint . $this->uri->path, $options);
+        return $this->apiClient->request($this->uri->method, self::$endpoint . $this->uri->path, $options);
     }
 }
